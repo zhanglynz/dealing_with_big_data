@@ -1,0 +1,39 @@
+--- 
+title: "Dealing With Big Data in R: Case Studies"
+author: "Lingyun Zhang"
+date: "`r Sys.Date()`"
+site: bookdown::bookdown_site
+output: bookdown::gitbook
+documentclass: book
+link-citations: yes
+links-as-notes: true
+colorlinks: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Preface {-}
+
+# (PART\*) Part I: Review {-}
+
+# some ideas
+
+- Database approach, see Peter Ellis' blog article
+- special packages, such as sparkly, H2O
+- parallel computing
+- take a sample 
+
+References: Chris' talk; Garrett Grolemund's talk
+
+# (PART\*) Part II: Case Studies {-}
+
+# Case Study 1 {-}
+
+**Problem statement:** We have two dataframes, `df1` and `df2`. `df1` has two columns/variables, `id` and `x`; and it has 1 million rows. `df2` has 1,001 columns---`id` and `i1` up to `i1000`; and it has 100,000 rows. We want to do **full join** of `df1` and `df2` and then find `y1 = x + i1`, `y2 = x + i2`, ..., `y1000 = x + i1000` and finally find mean of these `y` for each row.
+
+**A solution:**
+
+```{r, code=readLines("./R/case_study_1.R"), eval=FALSE}
+```
